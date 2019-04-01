@@ -1,0 +1,26 @@
+/*All form elements here*/
+/*form*/
+body label{font-weight:300;}
+.navLabel{font-weight:300;padding:8px 0; border:1px solid transparent;}
+body select.form-control,body select{padding:8px; border:1px solid #ccc; border-radius:2px; width:100%;}
+button.btn{
+    border-radius:2px;
+}
+.input-group{
+    width:100%;
+}
+.input-group .form-control{
+    border-radius:2px;
+    border: 1px solid var(--divider-color);
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child>.btn-group:not(:first-child)>.btn, .input-group-btn:first-child>.btn:not(:first-child), .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group>.btn, .input-group-btn:last-child>.dropdown-toggle {
+border-top-left-radius: 2px;
+border-bottom-left-radius: 2px;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child>.btn, .input-group-btn:first-child>.btn-group>.btn, .input-group-btn:first-child>.dropdown-toggle, .input-group-btn:last-child>.btn-group:not(:last-child)>.btn, .input-group-btn:last-child>.btn:not(:last-child):not(.dropdown-toggle) {
+border-top-right-radius: 2px;
+border-bottom-right-radius: 2px;
+}
+/*buttons*/
+.btn{transition:0.5s;padding:8px 16px;}
+.btn-success{background-color:var(--default-primary-color); border: 1px solid var(--default-primary-color);}

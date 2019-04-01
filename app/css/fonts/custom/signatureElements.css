@@ -1,0 +1,36 @@
+/*cards*/
+.container .jumbotron, .container-fluid .pricing-card,
+.container .jumbotron, .container .jumbotron.pricing-card {
+    border-radius: 2px;
+    padding:20px;
+    width: 270px;
+}
+.container .jumbotron h3, .container-fluid .pricing-card h3, .container .jumbotron.pricing-card h3,
+.container .jumbotron p, .container-fluid .pricing-card p, .container-fluid .jumbotron.pricing-card p{
+    margin-top:0;margin-bottom:0;
+}
+.container .jumbotron p, .container-fluid .pricing-card p{
+    margin-bottom:5px;
+}
+.flex-container{
+    width:max-content;
+}
+.row .flex-cards, 
+.container .flex-cards{
+    display:flex;width:300px; float:left;
+}
+.card .card-title-label{
+font-size:16px; font-weight:700; margin:0; width:100%;
+}
+.card .card-description-lable{
+    font-size:14px; font-weight:300; margin:0; width:100%;font-weight:300;
+}
+.card .card-promotion-lable{
+font-size:12px; font-weight:300; margin:0; width:100%;font-weight:300;
+}
+.card .row{
+    margin-bottom:10px;
+}
+.card .row:last-child{
+    margin-bottom:0;
+}

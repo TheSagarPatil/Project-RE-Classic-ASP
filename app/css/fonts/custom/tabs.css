@@ -1,0 +1,43 @@
+/*All tabs here*/
+/*TABS*/
+@media (min-width: 768px){
+    .nav.nav-tabs.nav-justified>.active>a, 
+    .nav.nav-tabs.nav-justified>.active>a:active
+    .nav.nav-tabs.nav-justified>.active>a:focus, 
+    .nav.nav-tabs.nav-justified>.active>a:hover{
+        border: 0;
+        border-bottom: 5px solid red ;
+    }
+    .nav.nav-tabs.nav-justified>li>a{
+        border: 0;
+        border-bottom:5px solid var(--divider-color);
+    }
+}
+.nav.nav-tabs.nav-justified>.active>a, 
+.nav.nav-tabs.nav-justified>.active>a:active, 
+.nav.nav-tabs.nav-justified>.active>a:focus, 
+.nav.nav-tabs.nav-justified>.active>a:hover{
+    border: 0;
+    border-bottom: 5px solid red ;
+}
+.nav.nav-tabs.nav-justified>li>a{
+    border:0;
+    border-bottom:5px solid var(--divider-color);
+}
+
+@media (max-width:768px){
+    .tabListContainer .nav-tabs.nav-justified>li{
+        display: table-cell;
+        width: 1%;
+    }
+    .tabListContainer{
+        height:auto;
+        border-bottom:5px solid transparent;
+    }
+}
+@media (min-width:768px){
+    .tabListContainer{
+        height:45px;
+        border-bottom:5px solid var(--divider-color);
+    }
+}
