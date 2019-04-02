@@ -33,6 +33,7 @@ do until rs.EOF
 	i=i+1
     rs.MoveNext
 loop	
+Session("access") = in_loginType
 if i = 0 then
 	rs.close
 	conn.close

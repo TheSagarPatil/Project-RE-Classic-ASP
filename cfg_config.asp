@@ -4,7 +4,7 @@ set rs=server.createObject("ADODB.recordset")
 
 'path=Server.MapPath("/DB2_2k3F.mdb")
 path="D:/db/DB2_2k3F.mdb"
-Response.Write path
+'Response.Write path
 conn.ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source="+path+";"
 conn.open
 'nm = request.form("aa")
@@ -19,5 +19,5 @@ conn.open
 'rs.close
 'conn.close
 
-Response.Write "{message:Hello, world!}" 
+'Response.Write "{message:Hello, world!}" 
 %>

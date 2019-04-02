@@ -1,5 +1,10 @@
 <!-- #Include File = "web_layout_header.asp" -->
-
+<%
+action = request.querystring("action")
+if action = "logout" then
+	Session.Abandon
+end if
+%>
 
 	<div class="container containerMain" id="Login2"   >
 		<form id="login" name="login" action="action_LoginAndForwardToHome.asp" method="post">
@@ -35,7 +40,7 @@
 						<div class="input-group">	
 						<select name="loginType" class="form-control" id="signInAs">
 							<option value="cust" selected>Customer</option>
-							<option value="devR">Developer (Representative)</option>
+							<option value="dev">Developer (Representative)</option>
 							<option value="agnt">Agent</option>
 							<option value="corp">Corporate Employee</option>
 						</select>

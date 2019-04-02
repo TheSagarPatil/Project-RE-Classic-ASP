@@ -2,12 +2,11 @@
 <script>
 //result = prompt('Enter your pincode', 411019);
 //pincode = window.location.search.substring(1).split('=')[1];
-/*
 if(window.location.search.substring(1).split('=')[0] == "msg"){
 	alert("window.location.search.substring(1).split('=')[1]")
-}*/
+}
 </script>
-	<div class="container hidden" id="home">
+	<div class="container containerMain" id="home">
 		<!--
 			<div class="row ">
 				<div class="col-xs-12 col-md-6 col-lg-8">
@@ -62,7 +61,7 @@ if(window.location.search.substring(1).split('=')[0] == "msg"){
 			</div>
 		-->
 	</div>
-	<div class="container containerMain" id="exploreProps">
+	<div class="container" id="exploreProps">
 		<div class="row ">
 			<div class="col-xs-12 col-sm-6 col-md-7 col-lg-7">
 				<h1>Explore Properties</h1>
@@ -126,7 +125,7 @@ do until rs.EOF
 					<div class="col-xs-12"><label class="card-promotion-lable"><%Response.Write(rs.Fields(3))%></label></div>
 				</div>
 				<div class="row">
-					<div class="imageHolder" style="background:url('images/props/<%Response.Write(rs.Fields(0))%>.jpg')">
+					<div class="imageHolder" style="">
 					</div>
 				</div>
 				<div class="row">
@@ -141,12 +140,9 @@ do until rs.EOF
 				<div class="row">
 					<div class="col-xs-12">
 						<form name="f_shortlist" action="action_addToShortlist.asp">
-						<input type="hidden" name="prop" value="<% Response.Write(rs.Fields(0)) %>"/>
+						<input type="hidden" name="propShortlist" value="<% Response.Write(rs.Fields(0)) %>"/>
 						<input type="hidden" name="action" value="add"/>
-						<input type="hidden" name="rdrPath" value=" <%Response.Write(Request.ServerVariables("SCRIPT_NAME")) %>">
-						<%if Session("access") = "cust" then%>
 						<button class="btn btn-success btn-choose-basket"  submit>Add to Shortlist</button>
-						<% end if %>
 						<a class="btn btn-success pull-right" href="ViewProperty.asp?prop=<% Response.Write(rs.Fields(0)) %>">View</a>
 						</form>
 						

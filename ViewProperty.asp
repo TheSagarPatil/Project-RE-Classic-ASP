@@ -53,8 +53,15 @@ do until rs.EOF
 		</div>
 		<div class="row">
 			<div class="col-xs-12">
-				<button class="btn btn-success" >Add to Shortlist</button>
-				<a class="btn btn-success pull-right" propId="0" href="purchase.asp?propId=<%Response.Write(rs.fields(0))%>">Purchase</a>
+			<%
+			if Session("customerId") then
+			%>
+			<button class="btn btn-success" >Add to Shortlist</button>
+			<a class="btn btn-success pull-right" prop="0" href="purchaseProperty.asp?prop=<%Response.Write(rs.fields(0))%>">Purchase</a>
+			<%
+			end if
+			%>
+			
 			</div>
 		</div>
 		</div>

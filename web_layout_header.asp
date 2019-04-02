@@ -50,31 +50,58 @@
 				</div>
 			</div>
 			<ul class="row mainMenu" >
-				<li class=""><div><a href="Default.aspx">Explore</a></div></li>
+				<li class=""><div><a href="Default.asp">Explore</a></div></li>
 			</ul>
+			<%if Session("access") = "cust" then%>
 			<ul class="row mainMenu" >
-				<li class=""><div><a href="ShortList.aspx">Shortlist</a></div></li>
+				<li class=""><div><a href="viewShortList.asp">View Shortlist</a></div></li>
 			</ul>
+			<% end if %>
+			<%if Session("access") = "" then%>
 			<ul class="row mainMenu">
 				<li class=""><div><a href="Login.asp">Login</a></div></li>
-				<li class=""><div><a href="Register.aspx">Register</a></div></li>
+				<li class=""><div><a href="Register.asp">Register</a></div></li>
 			</ul>
+			<%else%>
+			<ul class="row mainMenu">
+				<li class=""><div><a href="Login.asp?action=logout">Logout</a></div></li>
+			</ul>
+			<%
+			end if
+			%>
+			<%if Session("access") = "dev" or Session("access") = "agnt" or Session("access") = "cust" or Session("access") = "corp"then%>
 			<ul class="row mainMenu">
 				<li class=""><div class="ddcaption" style="width:100%;">Account</div>
 					<ul class="dropdown">
-						<li class=""><a href="UpdateProfile.aspx">Update Profile</a></li>
+						<li class=""><a href="updateProfile.asp?personId=XX">Update Profile</a></li>
 					</ul>
 				</li>
 			</ul>
+			<%end if %>
+			
+			<% if Session("access") = "corp" then%>
 			<ul class="row mainMenu">
 				<li class=""><div class="ddcaption" style="width:100%;">Management</div>
 					<ul class="dropdown">
-						<li class=""><a href="ManageDevelopers.aspx">Manage Properties</a></li>
-						<li class=""><a href="ManageProperties.aspx">Manage Developers</a></li>
+						<li class=""><a href="viewDevelopers.asp">Manage Developers</a></li>
+						<li class=""><a href="viewProperties.asp">Manage Properties</a></li>
+						
 						<li class=""><a href="ManageCustomers.aspx">Manage Customers</a></li>
+						
 					</ul>
 				</li>
 			</ul>
+			<% end if %>
+			
+			<% if Session("access") = "agnt" or Session("access") = "corp" then%>
+			<ul class="row mainMenu">
+				<li class=""><div class="ddcaption" style="width:100%;">Inquiries</div>
+					<ul class="dropdown">
+						<li class=""><a href="viewInquiries.asp">View Inquiries</a></li>
+					</ul>
+				</li>
+			</ul>
+			<% end if %>
 		</div>	
 	</div>
 </aside>

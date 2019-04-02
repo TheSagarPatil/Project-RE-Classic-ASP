@@ -1,0 +1,4 @@
+<%
+'strPath= Request.ServerVariables("SCRIPT_NAME") 
+
+%>
